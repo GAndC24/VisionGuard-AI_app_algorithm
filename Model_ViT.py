@@ -1,7 +1,6 @@
 import torch.nn as nn
 import torch
 from torchvision.models import vit_b_16, ViT_B_16_Weights, vit_l_16, ViT_L_16_Weights
-from transformers import ViTModel
 
 
 class Multi_Label_ViT_Net(nn.Module):

@@ -4,7 +4,6 @@ from Model_ViT import Multi_Label_ViT_Net
 import torch
 from PIL import Image
 from utils.data_preprocessing import *
-from werkzeug.utils import secure_filename
 import os
 import logging
 from io import BytesIO
@@ -15,7 +14,6 @@ from torchvision.transforms import Grayscale, ToTensor, Resize
 from fr_unet import FR_UNet
 from bunch import Bunch
 import gc
-
 
 
 app = Flask(__name__)
