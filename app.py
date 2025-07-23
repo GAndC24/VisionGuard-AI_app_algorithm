@@ -226,10 +226,10 @@ def predict():
             logits = model_classify(classify_img_l_batch, classify_img_r_batch)
             pred = torch.stack([torch.sigmoid(logits[label].squeeze(1)) for label in logits.keys()], dim=1)
 
-        # 显存回收
-        del model_classify
-        gc.collect()
-        torch.cuda.empty_cache()
+        # # 显存回收
+        # del model_classify
+        # gc.collect()
+        # torch.cuda.empty_cache()
 
         # 获取各眼疾概率
         Probability = {}  # 各疾病概率
